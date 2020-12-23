@@ -2,10 +2,20 @@
   <div class="Header">
     <h1>CONSUMO DE SERVICIO API JAVA</h1>
 </div>
-  <div class="Characters"> 
-    <ng-container *ngFor="let item of dataItunesArtist" >
-      <app-card [ItunsArtist] = "item"  ></app-card>
-    </ng-container>
-    
-  </div>
+
+<mat-tab-group>
+  <mat-tab label=" Artitas de Itunes">
+    <div class="Characters"> 
+      <ng-container *ngFor="let item of dataItunesArtist" >
+        <app-card [ItunsArtist] = "item"  ></app-card>
+      </ng-container>      
+    </div>
+  </mat-tab>
+  <mat-tab label=" Tv Show"> </mat-tab>
+  <mat-tab label="SOAP"> Content 3 </mat-tab>
+</mat-tab-group>
+
+
+ 
 </div>
+
