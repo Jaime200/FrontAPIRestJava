@@ -1,5 +1,11 @@
 <div class='App bg__light'>
-  <div className="Characters"> 
+  <div class="Header">
+    <h1>CONSUMO DE SERVICIO API JAVA</h1>
+</div>
+  <div class="Characters"> 
+    <ng-container *ngFor="let item of dataItunesArtist" >
+      <app-card [ItunsArtist] = "item"  ></app-card>
+    </ng-container>
     
   </div>
 </div>

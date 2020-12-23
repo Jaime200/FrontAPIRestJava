@@ -1,6 +1,7 @@
 <div class='Character__bg__light' >
-    <!-- <img src={image} alt={name} /> -->
-    <h1>Hola</h1>
-    <p>Parrafo</p> 
+    <img [src]="ItunsArtist.artworkUrl100" alt={{ItunsArtist.artistName}} />
+    <br>
+    <span>{{ItunsArtist.artistName}}</span>
+    <p>{{ItunsArtist?.trackName }}</p> 
     
   </div>
