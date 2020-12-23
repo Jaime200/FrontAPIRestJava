@@ -30,4 +30,8 @@ export class AppComponent implements OnInit {
       }
     )
   }
+
+  buscaTermino(termino){
+    console.log(termino)
+  }
 }

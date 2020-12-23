@@ -2,12 +2,16 @@
   <div class="Header">
     <h1>CONSUMO DE SERVICIO API JAVA</h1>
 </div>
-<form class="mat__form">
-  <mat-form-field class="full__width">
-    <mat-label>Búsqueda</mat-label>
-    <input matInput placeholder="Jack" value="">
-  </mat-form-field>
-</form>
+
+  
+    
+   
+    <div class="margin">     
+     
+      <input placeholder="Búsqueda" type="text" #txtbusqueda (keyup)="buscaTermino(txtbusqueda.value)">
+    </div>
+  
+
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label=" Artitas de Itunes">
     <div class="Characters"> 
