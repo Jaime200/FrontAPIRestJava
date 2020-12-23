@@ -6,19 +6,24 @@ import { CardComponent } from './components/card/card.component';
 import { HttpClientModule } from '@angular/common/http'
 import {MatTabsModule} from '@angular/material/tabs';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { CardShowComponent } from './components/card-show/card-show.component';
+import {MatInputModule} from '@angular/material/input';
+import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
+    CardShowComponent,
      
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     MatTabsModule,
-    NoopAnimationsModule
+    NoopAnimationsModule,
+    MatInputModule
   ],
-  providers: [],
+  providers: [ {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

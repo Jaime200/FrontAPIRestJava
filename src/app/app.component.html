@@ -2,8 +2,13 @@
   <div class="Header">
     <h1>CONSUMO DE SERVICIO API JAVA</h1>
 </div>
-
-<mat-tab-group>
+<form class="mat__form">
+  <mat-form-field class="full__width">
+    <mat-label>Búsqueda</mat-label>
+    <input matInput placeholder="Jack" value="">
+  </mat-form-field>
+</form>
+<mat-tab-group mat-align-tabs="center">
   <mat-tab label=" Artitas de Itunes">
     <div class="Characters"> 
       <ng-container *ngFor="let item of dataItunesArtist" >
@@ -11,7 +16,14 @@
       </ng-container>      
     </div>
   </mat-tab>
-  <mat-tab label=" Tv Show"> </mat-tab>
+  <mat-tab label=" Tv Show"> 
+    <div class="Characters"> 
+      <ng-container *ngFor="let item of dataTvShow" >
+        <app-card-show [TvShow] = "item"  ></app-card-show>
+      </ng-container>      
+    </div>
+
+  </mat-tab>
   <mat-tab label="SOAP"> Content 3 </mat-tab>
 </mat-tab-group>
 

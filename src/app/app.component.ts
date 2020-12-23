@@ -9,6 +9,7 @@ import { InfoApiService } from './service/info-api.service';
 export class AppComponent implements OnInit {
   title = 'FrontApiRestJava';
   public dataItunesArtist:any;
+  public dataTvShow:any
   constructor(
     private _InfoApiService:InfoApiService
   ){
@@ -18,8 +19,11 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this._InfoApiService.getInfoApi("Jac").subscribe(
       (resp:any) =>{
-        console.log(resp)
+        
         this.dataItunesArtist = resp['resultItunes']['results'];
+        this.dataTvShow =  resp['resultTvmaze'];
+
+        console.log(this.dataTvShow)
       },
       (error) => {
         console.log(error)
