@@ -9,11 +9,14 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { CardShowComponent } from './components/card-show/card-show.component';
 import {MatInputModule} from '@angular/material/input';
 import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/material/core';
+import { APP_ROUTES } from './app.routes';
+import { HomeComponent } from './home/home.component'
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     CardShowComponent,
+    HomeComponent,
      
   ],
   imports: [
@@ -21,7 +24,8 @@ import { ErrorStateMatcher, ShowOnDirtyErrorStateMatcher } from '@angular/materi
     HttpClientModule,
     MatTabsModule,
     NoopAnimationsModule,
-    MatInputModule
+    MatInputModule,
+    APP_ROUTES
   ],
   providers: [ {provide: ErrorStateMatcher, useClass: ShowOnDirtyErrorStateMatcher}],
   bootstrap: [AppComponent]

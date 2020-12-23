@@ -1,0 +1,45 @@
+.App {
+    text-align: center;
+  }
+  
+  .bg__light {
+    background-color: #fafafa;
+    color: #252525;
+  }
+  
+  .Characters{
+    display: grid;
+    grid-template-columns: repeat(4 ,1fr);
+    grid-template-rows:  auto;
+    grid-gap: 10px;
+    margin-top: 20px;
+}
+
+
+.mat__form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.full__width {
+  width: 100%;
+}
+
+
+
+
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.margin { 
+  margin: 20px;
+}
