@@ -2,19 +2,17 @@
   <div class="Header">
     <h1>CONSUMO DE SERVICIO API JAVA</h1>
 </div>
-
-  
-    
-   
-    <div class="margin">     
-     
+    <div class="margin">          
       <input placeholder="Búsqueda" type="text" #txtbusqueda (keyup)="buscaTermino(txtbusqueda.value)">
     </div>
   
-
+<ng-container *ngIf="msg.length>0" >
+  <h1>{{msg}}</h1>
+</ng-container>
 <mat-tab-group mat-align-tabs="center">
   <mat-tab label=" Artitas de Itunes">
     <div class="Characters"> 
+      
       <ng-container *ngFor="let item of dataItunesArtist" >
         <app-card [ItunsArtist] = "item"  ></app-card>
       </ng-container>      
