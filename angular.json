@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "FrontApiRestJava"
+  "defaultProject": "FrontApiRestJava",
+  "cli": {
+    "analytics": false
+  }
 }
